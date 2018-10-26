@@ -1,27 +1,19 @@
 buildscript {
   repositories {
-    jcenter()
-    mavenLocal()
+	mavenLocal()
     maven {url 'http://developer.marklogic.com/maven2/'}
   }
-  dependencies {
-    classpath 'com.marklogic:ml-data-hub:4.0.1'
-  }
 }
 
-
-apply plugin: 'java'
-apply plugin: 'com.marklogic.ml-data-hub'
-
-repositories {
-    jcenter()
-    mavenCentral()
-    mavenLocal()
-    maven {url 'http://developer.marklogic.com/maven2/'}
+plugins {
+    id 'net.saliman.properties' version '1.4.6'
+    id 'com.marklogic.ml-data-hub' version '4.0.1'
 }
 
-dependencies {
-    compile 'com.marklogic:marklogic-data-hub:4.0.1'
+test{
+	dependsOn 'runScript'
 }
 
-
+task runScript(type:Exec) {
+	commandLine 'install_run_flow.sh'
+}

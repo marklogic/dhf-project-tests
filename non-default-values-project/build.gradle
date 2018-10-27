@@ -15,5 +15,5 @@ test{
 }
 
 task runScript(type:Exec) {
-	commandLine 'install_run_flow.sh'
+	commandLine './install_run_flow.sh'
 }

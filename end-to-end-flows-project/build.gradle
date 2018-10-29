@@ -56,7 +56,7 @@ task install(type:Exec) {
 }
 
 task tearDown(type:Exec) {
-	commandLine './gradlew', 'mlUnDeploy', '-PConfirm=true'
+	commandLine './gradlew', 'mlUnDeploy', '-Pconfirm=true'
 }
 
 test.finalizedBy(tearDown)

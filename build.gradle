@@ -19,12 +19,9 @@ subprojects {
     repositories {
         mavenLocal()
         jcenter()
-		mavenCentral()
+        mavenCentral()
         maven {url 'http://developer.marklogic.com/maven2/'}
     }
-
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.5'
-}
+task wrapper(type: Wrapper) { gradleVersion = '4.5' }

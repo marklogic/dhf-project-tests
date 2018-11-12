@@ -1,23 +1,20 @@
 buildscript {
-  repositories {
-     mavenLocal()
-	 maven {url 'http://developer.marklogic.com/maven2/'}
-  }
-  dependencies {
-	  classpath "com.marklogic:ml-data-hub:4.0.3"
-	  classpath "com.marklogic:marklogic-data-hub:4.0.3"
-  }
-	  
+    repositories {
+        mavenLocal()
+        maven {url 'http://developer.marklogic.com/maven2/'}
+    }
+    dependencies {
+        classpath "com.marklogic:ml-data-hub:4.0.3"
+        classpath "com.marklogic:marklogic-data-hub:4.0.3"
+    }
 }
 
-plugins {
-    id 'net.saliman.properties' version '1.4.6'   
-}
+plugins { id 'net.saliman.properties' version '1.4.6'    }
 
 apply plugin: "com.marklogic.ml-data-hub"
 
 repositories {
-	mavenLocal()
+    mavenLocal()
     jcenter()
     maven {url 'http://developer.marklogic.com/maven2/'}
 }
@@ -47,16 +44,10 @@ dependencies {
     testCompile 'ch.qos.logback:logback-classic:1.1.11'
     testCompile 'org.slf4j:log4j-over-slf4j:1.7.13'
 }
-test{
-	dependsOn 'install'
-}
+test{ dependsOn 'install' }
 
-task install(type:Exec) {
-	commandLine './gradlew', 'mlDeploy'
-}
+task install(type:Exec) { commandLine './gradlew', 'mlDeploy' }
 
-task tearDown(type:Exec) {
-	commandLine './gradlew', 'mlUnDeploy', '-Pconfirm=true'
-}
+task tearDown(type:Exec) { commandLine './gradlew', 'mlUnDeploy', '-Pconfirm=true' }
 
 test.finalizedBy(tearDown)

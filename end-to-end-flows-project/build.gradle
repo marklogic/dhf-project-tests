@@ -1,20 +1,20 @@
 buildscript {
-  repositories {
-    maven {url 'http://developer.marklogic.com/maven2/'}
-  }
+    repositories {
+        mavenLocal()
+        maven {url 'http://developer.marklogic.com/maven2/'}
+    }
+    dependencies {
+        classpath "com.marklogic:ml-data-hub:4.0.3"
+        classpath "com.marklogic:marklogic-data-hub:4.0.3"
+    }
 }
 
-plugins {
-    id 'java'
-    id 'eclipse'
-    id 'idea'
+plugins { id 'net.saliman.properties' version '1.4.6'    }
 
-    id 'net.saliman.properties' version '1.4.6'
-
-    id 'com.marklogic.ml-data-hub' version '4.0.1'
-}
+apply plugin: "com.marklogic.ml-data-hub"
 
 repositories {
+    mavenLocal()
     jcenter()
     maven {url 'http://developer.marklogic.com/maven2/'}
 }
@@ -23,9 +23,9 @@ ext.junitPlatformVersion = '1.0.0'
 ext.junitJupiterVersion  = '5.0.0'
 
 dependencies {
-    compile 'com.marklogic:marklogic-data-hub:4.0.1'
+    compile 'com.marklogic:marklogic-data-hub:4.0.3'
     compile 'com.marklogic:marklogic-xcc:9.0.4'
-    compile("com.marklogic:mlcp-util:0.3.0")
+    compile("com.marklogic:mlcp-util:0.9.0")
     compile("com.marklogic:mlcp:9.0.7") {
         exclude group: 'org.apache.avro', module: 'avro-tools'
     }
@@ -44,4 +44,10 @@ dependencies {
     testCompile 'ch.qos.logback:logback-classic:1.1.11'
     testCompile 'org.slf4j:log4j-over-slf4j:1.7.13'
 }
+test{ dependsOn 'install' }
 
+task install(type:Exec) { commandLine './gradlew', 'mlDeploy' }
+
+task tearDown(type:Exec) { commandLine './gradlew', 'mlUnDeploy', '-Pconfirm=true' }
+
+test.finalizedBy(tearDown)

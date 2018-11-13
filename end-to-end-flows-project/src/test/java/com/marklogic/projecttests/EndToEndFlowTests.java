@@ -32,7 +32,10 @@ import com.marklogic.hub.scaffold.Scaffolding;
 import com.marklogic.hub.util.FileUtil;
 import com.marklogic.hub.util.MlcpRunner;
 import com.marklogic.hub.validate.EntitiesValidator;
+
+import org.apache.commons.io.FileUtils;
 import org.custommonkey.xmlunit.XMLUnit;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
@@ -45,7 +48,7 @@ import org.skyscreamer.jsonassert.JSONCompareResult;
 import org.w3c.dom.Document;
 
 import javax.xml.transform.TransformerException;
-import java.io.FileWriter;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -81,6 +84,7 @@ class FinalCounts {
     public int jobFailedBatches;
     public String jobStatus;
     public String optionsFile = "options-test";
+    
 
     public FinalCounts(
         int stagingCount, int finalCount, int tracingCount, int jobCount, int completedCount, int failedCount,
@@ -114,8 +118,10 @@ public class EndToEndFlowTests extends HubTestBase {
     private String installDocError;
 
     private Scaffolding scaffolding;
-
+    private Path tmpInput = Paths.get(System.getProperty("java.io.tmpdir")).resolve("input");
+    private Path tmpHarmonize = Paths.get(System.getProperty("java.io.tmpdir")).resolve("harmonize");
     private static boolean isSetup = false;
+
 
     @BeforeEach
     public void setupEach() {
@@ -133,6 +139,19 @@ public class EndToEndFlowTests extends HubTestBase {
         scaffolding.createEntity(ENTITY);
 
         installUserModules(getHubAdminConfig(), true);
+    }
+    
+    @AfterEach
+    public void cleanupEach() {
+        try {
+            FileUtils.copyDirectory(tmpInput.toFile()
+                    , projectDir.resolve("plugins").resolve("entities").resolve(ENTITY).resolve("input").toFile());
+            FileUtils.copyDirectory(tmpHarmonize.toFile()
+                    , projectDir.resolve("plugins").resolve("entities").resolve(ENTITY).resolve("harmonize").toFile());
+        } catch (IOException e) {
+            System.out.println("Directory doesn't exist: "+e.getMessage());
+        }
+        
     }
 
 
@@ -376,15 +395,48 @@ public class EndToEndFlowTests extends HubTestBase {
     public List<DynamicTest> generateValidationTests() {
         List<DynamicTest> tests = new ArrayList<>();
         Path entityDir = projectDir.resolve("plugins").resolve("entities").resolve(ENTITY);
+        Path currInput = entityDir.resolve("input");
+        Path currHarmonize = entityDir.resolve("harmonize");
+        Path tmpInput = Paths.get(System.getProperty("java.io.tmpdir")).resolve("input");
+        Path tmpHarmonize = Paths.get(System.getProperty("java.io.tmpdir")).resolve("harmonize");
+        
+        try {
+            FileUtils.copyDirectory(currInput.toFile(), tmpInput.toFile());
+            FileUtils.copyDirectory(currHarmonize.toFile(), tmpHarmonize.toFile());
+            
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
 
         allCombos(((codeFormat, dataFormat, flowType, useEs) -> {
             String prefix = "validation-no-errors";
             String flowName = getFlowName(prefix, codeFormat, dataFormat, flowType, useEs);
             tests.add(DynamicTest.dynamicTest(flowName, () -> {
-
+                try {
+                    FileUtils.deleteQuietly(currInput.toFile());
+                    FileUtils.deleteQuietly(currHarmonize.toFile());
+                    if(flowType.equals(FlowType.HARMONIZE)) {
+                        FileUtils.copyDirectory(tmpHarmonize.resolve(flowName).toFile(), 
+                                currHarmonize.resolve(flowName).toFile());
+                    }
+                    else {
+                        FileUtils.copyDirectory(tmpInput.resolve(flowName).toFile(), 
+                                currInput.resolve(flowName).toFile());
+                    }
+                }
+                catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
+                
+                clearUserModules();
+                installUserModules(getHubAdminConfig(), true);
                 JsonNode actual = validateUserModules();
 
                 String expected = "{\"errors\":{}}";
+                
+                System.out.println("Actual: "+toJsonString(actual));
+                
                 JSONAssert.assertEquals(expected, toJsonString(actual), true);
 
                 Path flowDir = entityDir.resolve(flowType.toString()).resolve(flowName);
@@ -395,6 +447,23 @@ public class EndToEndFlowTests extends HubTestBase {
             String prefix = "validation-content-errors";
             String flowName = getFlowName(prefix, codeFormat, dataFormat, flowType, useEs);
             tests.add(DynamicTest.dynamicTest(flowName, () -> {
+                try {
+                    FileUtils.deleteDirectory(currInput.toFile());
+                    FileUtils.deleteDirectory(currHarmonize.toFile());
+                    if(flowType.equals(FlowType.HARMONIZE)) {
+                        FileUtils.copyDirectory(tmpHarmonize.resolve(flowName).toFile(), 
+                                currHarmonize.resolve(flowName).toFile());
+                    }
+                    else {
+                        FileUtils.copyDirectory(tmpInput.resolve(flowName).toFile(), 
+                                currInput.resolve(flowName).toFile());
+                    }
+                }
+                catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
+                clearUserModules();
+                installUserModules(getHubAdminConfig(), true);
                 JsonNode actual = validateUserModules();
 
                 if (codeFormat.equals(CodeFormat.JAVASCRIPT)) {
@@ -409,19 +478,28 @@ public class EndToEndFlowTests extends HubTestBase {
                 Path flowDir = entityDir.resolve(flowType.toString()).resolve(flowName);
             }));
         }));
-        return tests;
-    }
-
-
-    @TestFactory
-    public List<DynamicTest> generateValidationHeadersErrorsTests() {
-        List<DynamicTest> tests = new ArrayList<>();
-        Path entityDir = projectDir.resolve("plugins").resolve("entities").resolve(ENTITY);
-
+        
         allCombos(((codeFormat, dataFormat, flowType, useEs) -> {
             String prefix = "validation-headers-errors";
             String flowName = getFlowName(prefix, codeFormat, dataFormat, flowType, useEs);
             tests.add(DynamicTest.dynamicTest(flowName, () -> {
+                try {
+                    FileUtils.deleteDirectory(currInput.toFile());
+                    FileUtils.deleteDirectory(currHarmonize.toFile());
+                    if(flowType.equals(FlowType.HARMONIZE)) {
+                        FileUtils.copyDirectory(tmpHarmonize.resolve(flowName).toFile(), 
+                                currHarmonize.resolve(flowName).toFile());
+                    }
+                    else {
+                        FileUtils.copyDirectory(tmpInput.resolve(flowName).toFile(), 
+                                currInput.resolve(flowName).toFile());
+                    }
+                }
+                catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
+                clearUserModules();
+                installUserModules(getHubAdminConfig(), true);
                 JsonNode actual = validateUserModules();
                 if (codeFormat.equals(CodeFormat.JAVASCRIPT)) {
                     String expected = "{\"errors\":{\"e2eentity\":{\"" + flowName + "\":{\"headers\":{\"msg\":\"JS-JAVASCRIPT: =-00=--\\\\8\\\\sthifalkj;; -- Error running JavaScript request: SyntaxError: Unexpected token =\",\"uri\":\"/entities/e2eentity/" + flowType.toString() + "/" + flowName + "/headers.sjs\",\"line\":16,\"column\":2}}}}}";
@@ -440,6 +518,23 @@ public class EndToEndFlowTests extends HubTestBase {
             String prefix = "validation-triples-errors";
             String flowName = getFlowName(prefix, codeFormat, dataFormat, flowType, useEs);
             tests.add(DynamicTest.dynamicTest(flowName, () -> {
+                try {
+                    FileUtils.deleteDirectory(currInput.toFile());
+                    FileUtils.deleteDirectory(currHarmonize.toFile());
+                    if(flowType.equals(FlowType.HARMONIZE)) {
+                        FileUtils.copyDirectory(tmpHarmonize.resolve(flowName).toFile(), 
+                                currHarmonize.resolve(flowName).toFile());
+                    }
+                    else {
+                        FileUtils.copyDirectory(tmpInput.resolve(flowName).toFile(), 
+                                currInput.resolve(flowName).toFile());
+                    }
+                }
+                catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
+                clearUserModules();
+                installUserModules(getHubAdminConfig(), true);
                 JsonNode actual = validateUserModules();
                 if (codeFormat.equals(CodeFormat.JAVASCRIPT)) {
                     String expected = "{\"errors\":{\"e2eentity\":{\"" + flowName + "\":{\"triples\":{\"msg\":\"JS-JAVASCRIPT: =-00=--\\\\8\\\\sthifalkj;; -- Error running JavaScript request: SyntaxError: Unexpected token =\",\"uri\":\"/entities/e2eentity/" + flowType.toString() + "/" + flowName + "/triples.sjs\",\"line\":16,\"column\":2}}}}}";
@@ -459,6 +554,21 @@ public class EndToEndFlowTests extends HubTestBase {
             String prefix = "validation-main-errors";
             String flowName = getFlowName(prefix, codeFormat, dataFormat, flowType, useEs);
             tests.add(DynamicTest.dynamicTest(flowName, () -> {
+                try {
+                    FileUtils.deleteDirectory(currInput.toFile());
+                    FileUtils.deleteDirectory(currHarmonize.toFile());
+                    if(flowType.equals(FlowType.HARMONIZE)) {
+                        FileUtils.copyDirectory(tmpHarmonize.resolve(flowName).toFile(), 
+                                currHarmonize.resolve(flowName).toFile());
+                    }
+                    else {
+                        FileUtils.copyDirectory(tmpInput.resolve(flowName).toFile(), 
+                                currInput.resolve(flowName).toFile());
+                    }
+                }
+                catch(IOException e) {
+                    throw new RuntimeException(e);
+                }
                 clearUserModules();
                 installUserModules(getHubAdminConfig(), true);
                 JsonNode actual = validateUserModules();
@@ -481,6 +591,23 @@ public class EndToEndFlowTests extends HubTestBase {
                 String prefix = "validation-collector-errors";
                 String flowName = getFlowName(prefix, codeFormat, dataFormat, flowType, useEs);
                 tests.add(DynamicTest.dynamicTest(flowName, () -> {
+                    try {
+                        FileUtils.deleteDirectory(currInput.toFile());
+                        FileUtils.deleteDirectory(currHarmonize.toFile());
+                        if(flowType.equals(FlowType.HARMONIZE)) {
+                            FileUtils.copyDirectory(tmpHarmonize.resolve(flowName).toFile(), 
+                                    currHarmonize.resolve(flowName).toFile());
+                        }
+                        else {
+                            FileUtils.copyDirectory(tmpInput.resolve(flowName).toFile(), 
+                                    currInput.resolve(flowName).toFile());
+                        }
+                    }
+                    catch(IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    clearUserModules();
+                    installUserModules(getHubAdminConfig(), true);
                     JsonNode actual = validateUserModules();
                     if (codeFormat.equals(CodeFormat.JAVASCRIPT)) {
                         String expected = "{\"errors\":{\"e2eentity\":{\"" + flowName + "\":{\"collector\":{\"msg\":\"JS-JAVASCRIPT: =-00=--\\\\8\\\\sthifalkj;; -- Error running JavaScript request: SyntaxError: Unexpected token =\",\"uri\":\"/entities/e2eentity/" + flowType.toString() + "/" + flowName + "/collector.sjs\",\"line\":13,\"column\":2}}}}}";
@@ -505,6 +632,23 @@ public class EndToEndFlowTests extends HubTestBase {
                 String prefix = "validation-writer-errors";
                 String flowName = getFlowName(prefix, codeFormat, dataFormat, flowType, useEs);
                 tests.add(DynamicTest.dynamicTest(flowName, () -> {
+                    try {
+                        FileUtils.deleteDirectory(currInput.toFile());
+                        FileUtils.deleteDirectory(currHarmonize.toFile());
+                        if(flowType.equals(FlowType.HARMONIZE)) {
+                            FileUtils.copyDirectory(tmpHarmonize.resolve(flowName).toFile(), 
+                                    currHarmonize.resolve(flowName).toFile());
+                        }
+                        else {
+                            FileUtils.copyDirectory(tmpInput.resolve(flowName).toFile(), 
+                                    currInput.resolve(flowName).toFile());
+                        }
+                    }
+                    catch(IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    clearUserModules();
+                    installUserModules(getHubAdminConfig(), true);
                     JsonNode actual = validateUserModules();
                     String expected;
                     if (codeFormat.equals(CodeFormat.JAVASCRIPT)) {
@@ -518,8 +662,10 @@ public class EndToEndFlowTests extends HubTestBase {
                 }));
             }
         }));
+
         return tests;
     }
+   
 
     //The XML file in the following input flows have comments, processing instruction nodes in addition to root node.
     // DHFPROD-767 (Github #882)
@@ -1195,3 +1341,4 @@ public class EndToEndFlowTests extends HubTestBase {
         assertEquals(finalCounts.jobStatus, node.get("status").asText());
    }
 }
+

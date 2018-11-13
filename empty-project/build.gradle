@@ -1,12 +1,16 @@
+buildscript {
+  repositories {
+    mavenLocal()
+    maven {url 'http://developer.marklogic.com/maven2/'}
+  }
+  dependencies {
+      classpath "com.marklogic:ml-data-hub:4.0.3"
+      classpath "com.marklogic:marklogic-data-hub:4.0.3"
+  }
+      
+}
+
 plugins {
-    id 'net.saliman.properties' version '1.4.6'
-    id 'com.marklogic.ml-data-hub' version "4.0.1"
+    id 'net.saliman.properties' version '1.4.6' 
 }
-
-apply plugin: 'java'
-
-dependencies {
-    compile 'com.marklogic:marklogic-data-hub:4.0.1'
-}
-
-
+apply plugin: "com.marklogic.ml-data-hub"

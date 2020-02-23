@@ -1,0 +1,22 @@
+{
+  "database-name": "%%mlFinalDbName%%",
+  "database-backup":[
+    {"backup-id":"2889081595792328957",
+      "backup-enabled":true,
+      "backup-directory":"/home/backups/Documents",
+      "backup-type":"weekly",
+      "backup-period":1,
+      "backup-day":["sunday"],
+      "backup-start-time":"00:00:00-08:00",
+      "backup-timestamp":"2015-12-22T11:01:25.081669-08:00",
+      "max-backups":2,
+      "backup-security-database":true,
+      "backup-schemas-database":true,
+      "backup-triggers-database":true,
+      "include-replicas":true,
+      "incremental-backup":false,
+      "journal-archiving":false,
+      "journal-archive-path":"",
+      "journal-archive-lag-limit":15}
+  ]
+}

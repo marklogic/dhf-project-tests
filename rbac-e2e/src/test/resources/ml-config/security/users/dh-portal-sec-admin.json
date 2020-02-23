@@ -1,0 +1,6 @@
+{
+  "user-name": "dh-portal-sec-admin",
+  "description": "A user with portal sec admin",
+  "password": "dh-portal-sec-admin",
+  "role": ["data-hub-portal-security-admin"]
+}

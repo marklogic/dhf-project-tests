@@ -1,0 +1,71 @@
+{
+  "lang" : "zxx",
+  "name" : "ingestion_mapping_mastering-flow-mapping-step-xml",
+  "description" : "",
+  "version" : 1,
+  "targetEntityType" : "http://marklogic.org/Order-0.0.1/Order",
+  "sourceContext" : "/",
+  "sourceURI" : "/Order/xml/10250.xml",
+  "properties" : {
+    "BooleanField1" : {
+      "sourcedFrom" : "boolean(2>4)"
+    },
+    "StringField2" : {
+      "sourcedFrom" : "contains('tested', 'test')"
+    },
+    "NumberField2" : {
+      "sourcedFrom" : "count(('test','data','for','count'))"
+    },
+    "StringField1" : {
+      "sourcedFrom" : "concat('declarative','-','mapping')"
+    },
+    "NumberField1" : {
+      "sourcedFrom" : "avg((4,6))"
+    },
+    "OrderDetails" : {
+      "properties" : {
+        "ProductID" : {
+          "sourcedFrom" : "ProductID"
+        },
+        "UnitPrice" : {
+          "sourcedFrom" : "UnitPrice"
+        },
+        "Quantity" : {
+          "sourcedFrom" : "Quantity"
+        },
+        "Discount" : {
+          "sourcedFrom" : "Discount"
+        }
+      },
+      "sourcedFrom" : "Order/OrderDetails/OrderDetail",
+      "targetEntityType" : "#/definitions/OrderDetail"
+    },
+    "StringField3" : {
+      "sourcedFrom" : "replace(\"this is a string\", \"this\", \"that\")"
+    },
+    "NumberField3" : {
+      "sourcedFrom" : "xqy-add-function(5,3)"
+    },
+    "ShippedDate" : {
+      "sourcedFrom" : "parseDate('01/08/1996','MM/DD/YYYY')"
+    },
+    "ShipCity" : {
+      "sourcedFrom" : "Order/ShipCity"
+    },
+    "CustomerID" : {
+      "sourcedFrom" : "Order/CustomerID"
+    },
+    "OrderID" : {
+      "sourcedFrom" : "Order/@OrderID"
+    },
+    "OrderDate" : {
+      "sourcedFrom" : "Order/OrderDate"
+    },
+    "ShipCountry" : {
+      "sourcedFrom" : "Order/ShipCountry"
+    },
+    "BooleanField2" : {
+      "sourcedFrom" : "empty(null)"
+    }
+  }
+}

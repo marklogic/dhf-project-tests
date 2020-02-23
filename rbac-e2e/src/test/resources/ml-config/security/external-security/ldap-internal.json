@@ -1,0 +1,15 @@
+{
+  "external-security-name" : "ldapExample",
+  "description" : "ldap testing external security",
+  "authentication" : "ldap",
+  "cache-timeout" : 300,
+  "authorization" : "internal",
+  "ldap-server" : {
+    "ldap-server-uri" : "ldap://dc1.mltest1.local:389",
+    "ldap-base" : "CN=Users,DC=MLTEST1,DC=LOCAL",
+    "ldap-attribute" : "sAMAccountName",
+    "ldap-default-user" : "user1",
+    "ldap-password" : "Welcome@123",
+    "ldap-bind-method" : "MD5"
+  }
+}

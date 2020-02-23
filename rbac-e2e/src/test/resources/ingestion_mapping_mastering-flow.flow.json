@@ -1,0 +1,196 @@
+{
+  "name" : "ingestion_mapping_mastering-flow",
+  "description" : "A flow to run ingestion,mapping and mastering",
+  "batchSize" : 100,
+  "threadCount" : 4,
+  "stopOnError" : false,
+  "options" : { },
+  "version" : 0,
+  "steps" : {
+    "1" : {
+      "name" : "ingest-step-xml",
+      "description" : "ingests xml docs to data-hub-STAGING",
+      "options" : {
+        "additionalCollections" : [ ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "ingestion_mapping_mastering-flow"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "mastering-flow-ingest-xml" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "outputFormat" : "xml",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {},
+      "retryLimit" : null,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "input/Order/xml",
+        "inputFileType" : "xml",
+        "outputURIReplacement" : ".*input,''",
+        "separator" : ""
+      }
+    },
+    "2" : {
+      "name" : "mapping-step-xml",
+      "description" : "maps and harmonizes docs to data-hub-FINAL",
+      "options" : {
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"mastering-flow-ingest-xml\"])",
+        "mapping" : {
+          "name" : "ingestion_mapping_mastering-flow-mapping-step-xml",
+          "version" : 1
+        },
+        "targetEntity" : "Order",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "mapping-step-xml", "Order" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "validateEntity" : false,
+        "sourceCollection" : "mastering-flow-ingest-xml",
+        "outputFormat" : "xml",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {},
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "3" : {
+      "name" : "matching-step",
+      "description" : "matches the docs",
+      "options" : {
+        "stepUpdate" : false,
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"mapping-step-xml\"])",
+        "acceptsBatch" : true,
+        "targetEntity" : "Order",
+        "sourceDatabase" : "data-hub-FINAL",
+        "collections" : [ "matching-step", "Order" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "matchOptions" : {
+          "propertyDefs" : {
+            "property" : [ {
+              "localname" : "ShipCity",
+              "name" : "ShipCity"
+            } ]
+          },
+          "algorithms" : {
+            "algorithm" : [ {
+              "name" : "double-metaphone",
+              "function" : "double-metaphone",
+              "namespace" : "http://marklogic.com/smart-mastering/algorithms",
+              "at" : "/com.marklogic.smart-mastering/algorithms/double-metaphone.xqy"
+            }, {
+              "name" : "thesaurus",
+              "function" : "thesaurus",
+              "namespace" : "http://marklogic.com/smart-mastering/algorithms",
+              "at" : "/com.marklogic.smart-mastering/algorithms/thesaurus.xqy"
+            }, {
+              "name" : "zip-match",
+              "function" : "zip-match",
+              "namespace" : "http://marklogic.com/smart-mastering/algorithms",
+              "at" : "/com.marklogic.smart-mastering/algorithms/zip.xqy"
+            }, {
+              "name" : "standard-reduction",
+              "function" : "standard-reduction"
+            } ]
+          },
+          "collections" : {
+            "content" : [ ]
+          },
+          "scoring" : {
+            "add" : [ {
+              "propertyName" : "ShipCity",
+              "weight" : "30"
+            } ],
+            "expand" : [ ],
+            "reduce" : [ ]
+          },
+          "actions" : {
+            "action" : [ ]
+          },
+          "thresholds" : {
+            "threshold" : [ {
+              "above" : "30",
+              "label" : "ShipCity",
+              "action" : "merge"
+            } ]
+          },
+          "tuning" : {
+            "maxScan" : 200
+          }
+        },
+        "sourceCollection" : "mapping-step-xml",
+        "outputFormat" : "xml",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {},
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-matching",
+      "stepDefinitionType" : "MATCHING"
+    },
+    "4" : {
+      "name" : "merging-step",
+      "description" : "merges the docs",
+      "options" : {
+        "stepUpdate" : false,
+        "additionalCollections" : [ ],
+        "sourceQuery" : "cts.collectionQuery([\"matching-step\"])",
+        "acceptsBatch" : false,
+        "targetEntity" : "Order",
+        "sourceDatabase" : "data-hub-FINAL",
+        "collections" : [ "merging-step", "Order" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "mergeOptions" : {
+          "matchOptions" : "",
+          "propertyDefs" : {
+            "properties" : [ {
+              "localname" : "ShipCity",
+              "name" : "ShipCity"
+            }, {
+              "localname" : "OrderID",
+              "name" : "OrderID"
+            } ],
+            "namespaces" : { }
+          },
+          "algorithms" : {
+            "stdAlgorithm" : {
+              "timestamp" : { }
+            },
+            "custom" : [ ],
+            "collections" : { }
+          },
+          "mergeStrategies" : [ ],
+          "merging" : [ {
+            "propertyName" : "ShipCity",
+            "sourceWeights" : [ ]
+          }, {
+            "propertyName" : "OrderID",
+            "maxValues" : "1",
+            "sourceWeights" : [ ]
+          } ]
+        },
+        "sourceCollection" : "",
+        "outputFormat" : "xml",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {},
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-merging",
+      "stepDefinitionType" : "MERGING"
+    }
+  }
+}

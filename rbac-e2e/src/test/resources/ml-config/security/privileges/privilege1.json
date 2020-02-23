@@ -1,0 +1,5 @@
+{
+  "privilege-name":"sample-project-execute-1",
+  "action": "http://datahub.marklogic.com/custom/my-privilege",
+  "kind":"execute"
+}

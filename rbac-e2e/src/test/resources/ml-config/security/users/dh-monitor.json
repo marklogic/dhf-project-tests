@@ -1,0 +1,6 @@
+{
+  "user-name": "dh-monitor",
+  "description": "A user to monitor datahub resources",
+  "password": "dh-monitor",
+  "role": ["data-hub-monitor"]
+}

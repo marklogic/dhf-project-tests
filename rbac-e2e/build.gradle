@@ -1,0 +1,68 @@
+buildscript {
+    repositories {
+        //maven {url 'http://distro.marklogic.com/nexus/repository/maven-snapshots/'}
+        mavenLocal()
+        //maven { url "https://plugins.gradle.org/m2/" }
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.marklogic:ml-data-hub:5.2-SNAPSHOT"
+        classpath "com.marklogic:marklogic-data-hub:5.2-SNAPSHOT"
+    }
+}
+
+plugins {
+    id 'java'
+    id 'groovy'
+    id "java-gradle-plugin"
+}
+
+apply plugin: "com.marklogic.ml-data-hub"
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+ext.junit4Version        = '4.12'
+ext.junitVintageVersion  = '4.12.0-RC3'
+ext.junitPlatformVersion = '1.4.0'
+ext.junitJupiterVersion  = '5.4.2'
+
+dependencies {
+    compile gradleApi()
+    testCompile localGroovy()
+    testImplementation gradleTestKit()
+
+    testImplementation(
+            "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}",
+            "io.rest-assured:rest-assured:4.2.0"
+    )
+    testRuntime(
+            "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}",
+    )
+
+    // JUnit Jupiter API and TestEngine implementation
+    testCompile "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
+    testCompile "org.junit.platform:junit-platform-commons:${junitPlatformVersion}"
+
+    // Only needed to run tests in an (IntelliJ) IDE(A) that bundles an older version
+    testRuntime "org.junit.platform:junit-platform-launcher:${junitPlatformVersion}"
+}
+
+task copyUsers(type: Copy) {
+    from "src/test/resources/ml-config/security/users"
+    into "src/main/ml-config/security/users"
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        exceptionFormat 'full'
+        showStandardStreams = true
+    }
+}
+
+test.dependsOn("copyUsers", "mlDeploy")

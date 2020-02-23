@@ -1,0 +1,96 @@
+{
+  "info" : {
+    "title" : "Order",
+    "version" : "0.0.1",
+    "baseUri" : "http://marklogic.org/"
+  },
+  "definitions" : {
+    "Order" : {
+      "primaryKey" : "OrderID",
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ "CustomerID", "ShipCountry", "ShipCity" ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : {
+        "OrderID" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "OrderDate" : {
+          "datatype" : "dateTime"
+        },
+        "ShippedDate" : {
+          "datatype" : "date"
+        },
+        "StringField1" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "StringField2" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "StringField3" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "NumberField1" : {
+          "datatype" : "integer"
+        },
+        "NumberField2" : {
+          "datatype" : "integer"
+        },
+        "NumberField3" : {
+          "datatype" : "integer"
+        },
+        "BooleanField1" : {
+          "datatype" : "boolean"
+        },
+        "BooleanField2" : {
+          "datatype" : "boolean"
+        },
+        "OrderDetails" : {
+          "datatype" : "array",
+          "items" : {
+            "$ref" : "#/definitions/OrderDetail"
+          }
+        },
+        "CustomerID" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "ShipCountry" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "ShipCity" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        }
+      }
+    },
+    "OrderDetail" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ "ProductID" ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : {
+        "ProductID" : {
+          "datatype" : "string",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "UnitPrice" : {
+          "datatype" : "double"
+        },
+        "Quantity" : {
+          "datatype" : "int"
+        },
+        "Discount" : {
+          "datatype" : "double"
+        }
+      }
+    }
+  }
+}

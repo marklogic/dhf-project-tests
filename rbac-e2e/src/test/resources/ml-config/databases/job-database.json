@@ -1,0 +1,14 @@
+{
+  "database-name": "%%mlJobDbName%%",
+  "schema-database": "%%mlStagingSchemasDbName%%",
+  "triggers-database": "%%mlStagingTriggersDbName%%",
+  "range-path-index": [
+    {
+      "scalar-type": "int",
+      "path-expression": "/some/path",
+      "collation": "",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "user-name": "dh-operator",
+  "description": "A user who can operator DH",
+  "password": "dh-operator",
+  "role": ["data-hub-operator"]
+}

@@ -1,0 +1,6 @@
+{
+  "user-name": "dh-admin",
+  "description": "A DH admin user",
+  "password": "dh-admin",
+  "role": ["data-hub-admin"]
+}

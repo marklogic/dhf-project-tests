@@ -1,0 +1,5 @@
+{
+  "group-name" : "SomeGroup",
+  "metering-enabled" : true,
+  "meters-database" : "Meters"
+}

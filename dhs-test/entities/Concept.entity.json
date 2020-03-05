@@ -1,0 +1,74 @@
+{
+  "info" : {
+    "title" : "Concept",
+    "version" : "0.0.1",
+    "baseUri" : "http://example.org/",
+    "description" : "A concept in a vocabulary"
+  },
+  "definitions" : {
+    "Concept" : {
+      "primaryKey" : "concept_id",
+      "required" : [ "concept_id", "vocabulary", "domain", "concept_name" ],
+      "pii" : [ "source_concept_code" ],
+      "elementRangeIndex" : [ "vocabulary", "domain", "is_standard", "invalid_reason" ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : {
+        "concept_id" : {
+          "datatype" : "unsignedLong",
+          "description" : "The CDM-assigned concept id"
+        },
+        "vocabulary" : {
+          "datatype" : "string",
+          "description" : "The vocabulary to which the concept belongs",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "domain" : {
+          "datatype" : "string",
+          "description" : "The domain to which the real world entity the concept pertains",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "is_standard" : {
+          "datatype" : "boolean",
+          "description" : "T/F Designated by the OHDSI vocabulary group as a standard concept"
+        },
+        "concept_class" : {
+          "datatype" : "string",
+          "description" : "Class to which the concept pertains or belongs as designated by the OHDSI vcabulary group",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "synonyms" : {
+          "datatype" : "array",
+          "description" : "0 or more synonyms",
+          "items" : {
+            "datatype" : "string",
+            "collation" : "http://marklogic.com/collation/codepoint"
+          }
+        },
+        "source_concept_code" : {
+          "datatype" : "string",
+          "description" : "The code from the source vocabulary ",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "invalid_reason" : {
+          "datatype" : "string",
+          "description" : "The reason for invalidation if the concept has been invalidated.",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        },
+        "valid_start_date" : {
+          "datatype" : "date",
+          "description" : "The start date of this concept, starts as valid"
+        },
+        "valid_end_date" : {
+          "datatype" : "date",
+          "description" : "The date through which this concept is valid. 20991231 is equivalent to currently valid"
+        },
+        "concept_name" : {
+          "datatype" : "string",
+          "description" : "The name for the concept",
+          "collation" : "http://marklogic.com/collation/codepoint"
+        }
+      }
+    }
+  }
+}

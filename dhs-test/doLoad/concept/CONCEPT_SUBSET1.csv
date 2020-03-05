@@ -1,0 +1,286 @@
+concept_id	concept_name	domain_id	vocabulary_id	concept_class_id	standard_concept	concept_code	valid_start_date	valid_end_date	invalid_reason
+40097603	adalimumab Injectable Solution [Humira]	Drug	RxNorm	Branded Drug Form		363562	19700101	20150907	D
+36808616	0.8 ML adalimumab 100 MG/ML Injectable Solution [Humira]	Drug	RxNorm Extension	Quant Branded Drug	S	OMOP4822657	20190128	20991231	
+36808634	0.8 ML adalimumab 100 MG/ML Injectable Solution [Humira] by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP4822676	20190128	20991231	
+36808635	0.8 ML adalimumab 100 MG/ML Injectable Solution [Humira] Box of 1 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP4822677	20190128	20991231	
+36808638	0.8 ML adalimumab 100 MG/ML Injectable Solution [Humira] Box of 1	Drug	RxNorm Extension	Quant Branded Box	S	OMOP4822680	20190128	20991231	
+44132944	0.8 ML adalimumab 50 MG/ML Injectable Solution [Humira]	Drug	RxNorm Extension	Quant Branded Drug		OMOP1127575	20170824	20180801	U
+36813618	adalimumab 100 MG/ML Injectable Solution [Humira] Box of 1	Drug	RxNorm Extension	Branded Drug Box	S	OMOP4827654	20190128	20991231	
+1594201	adalimumab Pen Injector [Humira]	Drug	RxNorm	Branded Drug Form		1921239	20170807	20190331	D
+1594204	adalimumab 100 MG/ML Pen Injector [Humira]	Drug	RxNorm	Branded Drug		1921242	20170807	20190331	D
+40724822	adalimumab 50 MG/ML Injectable Solution [Humira] Box of 2	Drug	RxNorm Extension	Branded Drug Box	S	OMOP4732372	20180604	20991231	
+37593679	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Aaha	Drug	RxNorm Extension	Marketed Product	S	OMOP4783113	20190117	20991231	
+37593680	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP4783114	20190117	20991231	
+37593681	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Emra-Med	Drug	RxNorm Extension	Marketed Product	S	OMOP4783115	20190117	20991231	
+37593682	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP4783116	20190117	20991231	
+37593683	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Medicopharm	Drug	RxNorm Extension	Marketed Product	S	OMOP4783117	20190117	20991231	
+37593684	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP4783118	20190117	20991231	
+37593685	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Aaha	Drug	RxNorm Extension	Marketed Product	S	OMOP4783119	20190117	20991231	
+37593686	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP4783120	20190117	20991231	
+37593687	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Emra-Med	Drug	RxNorm Extension	Marketed Product	S	OMOP4783121	20190117	20991231	
+37593688	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Medicopharm	Drug	RxNorm Extension	Marketed Product	S	OMOP4783122	20190117	20991231	
+37593747	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP4783180	20190117	20991231	
+37593748	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP4783181	20190117	20991231	
+37593749	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] by Aca Mueller	Drug	RxNorm Extension	Marketed Product	S	OMOP4783182	20190117	20991231	
+37593750	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] by Aca Mueller	Drug	RxNorm Extension	Marketed Product	S	OMOP4783183	20190117	20991231	
+21075440	adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2	Drug	RxNorm Extension	Branded Drug Box	S	OMOP256500	20170824	20991231	
+21147533	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP287924	20170824	20991231	
+21118084	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP287925	20170824	20991231	
+21127854	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP287926	20170824	20991231	
+42876131	adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 3	Drug	RxNorm Extension	Branded Drug Box	S	OMOP4873244	20200115	20991231	
+42876133	adalimumab 100 MG/ML Auto-Injector [Humira] Box of 3	Drug	RxNorm Extension	Branded Drug Box	S	OMOP4873246	20200115	20991231	
+42876368	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by Nmg	Drug	RxNorm Extension	Marketed Product	S	OMOP4873479	20200115	20991231	
+42876369	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by 2care4	Drug	RxNorm Extension	Marketed Product	S	OMOP4873480	20200115	20991231	
+42876370	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by 2care4	Drug	RxNorm Extension	Marketed Product	S	OMOP4873481	20200115	20991231	
+42876419	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 3	Drug	RxNorm Extension	Quant Branded Box	S	OMOP4873528	20200115	20991231	
+42876420	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 3 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP4873529	20200115	20991231	
+42876422	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP4873531	20200115	20991231	
+42876423	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 3	Drug	RxNorm Extension	Quant Branded Box	S	OMOP4873532	20200115	20991231	
+42876424	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 3 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP4873533	20200115	20991231	
+43264876	0.8 ML adalimumab 50 MG/ML Injection [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP560079	20170824	20991231	
+43254674	adalimumab 50 MG/ML Injection [Humira] Box of 6	Drug	RxNorm Extension	Branded Drug Box	S	OMOP530971	20170824	20991231	
+43286709	0.8 ML adalimumab 50 MG/ML Injection [Humira] Box of 6	Drug	RxNorm Extension	Quant Branded Box	S	OMOP560080	20170824	20991231	
+43292621	adalimumab 50 MG/ML Injection [Humira] Box of 2	Drug	RxNorm Extension	Branded Drug Box	S	OMOP530961	20170824	20991231	
+43291998	0.4 ML adalimumab 50 MG/ML Injection [Humira]	Drug	RxNorm Extension	Quant Branded Drug	S	OMOP559241	20170824	20991231	
+43270256	0.4 ML adalimumab 50 MG/ML Injection [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP559242	20170824	20991231	
+43611941	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 4	Drug	RxNorm Extension	Quant Branded Box	S	OMOP716703	20170824	20991231	
+36884132	adalimumab 100 MG/ML Injection [Humira]	Drug	RxNorm Extension	Branded Drug	S	OMOP998212	20170824	20991231	
+35410656	adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2	Drug	RxNorm Extension	Branded Drug Box	S	OMOP1144241	20170824	20991231	
+35414553	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP1148138	20170824	20991231	
+40881937	adalimumab 50 MG/ML Auto-Injector [Humira] Box of 4	Drug	RxNorm Extension	Branded Drug Box	S	OMOP2079899	20170824	20991231	
+40912987	adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6	Drug	RxNorm Extension	Branded Drug Box	S	OMOP2110949	20170824	20991231	
+40944240	adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 12	Drug	RxNorm Extension	Branded Drug Box	S	OMOP2142202	20170824	20991231	
+41037644	adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4	Drug	RxNorm Extension	Branded Drug Box	S	OMOP2235606	20170824	20991231	
+41100355	adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6	Drug	RxNorm Extension	Branded Drug Box	S	OMOP2298317	20170824	20991231	
+41068877	adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6	Drug	RxNorm Extension	Branded Drug Box	S	OMOP2266839	20170824	20991231	
+41194312	adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2	Drug	RxNorm Extension	Branded Drug Box	S	OMOP2392274	20170824	20991231	
+41407079	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP2605041	20170824	20991231	
+41411361	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP2609323	20170824	20991231	
+41411362	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Medicopharm	Drug	RxNorm Extension	Marketed Product	S	OMOP2609324	20170824	20991231	
+41411363	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Aca Mueller	Drug	RxNorm Extension	Marketed Product	S	OMOP2609325	20170824	20991231	
+41411364	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Inopha	Drug	RxNorm Extension	Marketed Product	S	OMOP2609326	20170824	20991231	
+41411365	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Gerke	Drug	RxNorm Extension	Marketed Product	S	OMOP2609327	20170824	20991231	
+41411366	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Veron	Drug	RxNorm Extension	Marketed Product	S	OMOP2609328	20170824	20991231	
+41411367	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Aca Mueller	Drug	RxNorm Extension	Marketed Product	S	OMOP2609329	20170824	20991231	
+41411389	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Propharmed	Drug	RxNorm Extension	Marketed Product	S	OMOP2609351	20170824	20991231	
+41411390	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Haematogmbh	Drug	RxNorm Extension	Marketed Product	S	OMOP2609352	20170824	20991231	
+41411391	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by HVD	Drug	RxNorm Extension	Marketed Product	S	OMOP2609353	20170824	20991231	
+41411392	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Haematogmbh	Drug	RxNorm Extension	Marketed Product	S	OMOP2609354	20170824	20991231	
+41411393	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 12 by Propharmed	Drug	RxNorm Extension	Marketed Product	S	OMOP2609355	20170824	20991231	
+41411394	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609356	20170824	20991231	
+41411395	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP2609357	20170824	20991231	
+41411396	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Emra-Med	Drug	RxNorm Extension	Marketed Product	S	OMOP2609358	20170824	20991231	
+41407129	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6	Drug	RxNorm Extension	Quant Branded Box	S	OMOP2605091	20170824	20991231	
+41411397	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP2609359	20170824	20991231	
+41411416	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP2609378	20170824	20991231	
+41411417	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Medicopharm	Drug	RxNorm Extension	Marketed Product	S	OMOP2609379	20170824	20991231	
+41411418	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Aca Mueller	Drug	RxNorm Extension	Marketed Product	S	OMOP2609380	20170824	20991231	
+41411436	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP2609398	20170824	20991231	
+41411448	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Cambridge	Drug	RxNorm Extension	Marketed Product	S	OMOP2609410	20170824	20991231	
+41411478	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2609440	20170824	20991231	
+41411540	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Propharmed	Drug	RxNorm Extension	Marketed Product	S	OMOP2609502	20170824	20991231	
+41411541	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP2609503	20170824	20991231	
+41411542	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Gerke	Drug	RxNorm Extension	Marketed Product	S	OMOP2609504	20170824	20991231	
+41411560	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 4	Drug	RxNorm Extension	Quant Branded Box	S	OMOP2609522	20170824	20991231	
+41411580	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Aca Mueller	Drug	RxNorm Extension	Marketed Product	S	OMOP2609542	20170824	20991231	
+41411581	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2609543	20170824	20991231	
+41411582	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP2609544	20170824	20991231	
+41411583	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2609545	20170824	20991231	
+41411603	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609565	20170824	20991231	
+41411604	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP2609566	20170824	20991231	
+41411605	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609567	20170824	20991231	
+41406535	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2604497	20170824	20991231	
+41411633	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609595	20170824	20991231	
+41411634	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Gerke	Drug	RxNorm Extension	Marketed Product	S	OMOP2609596	20170824	20991231	
+41411635	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP2609597	20170824	20991231	
+41411636	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Emra-Med	Drug	RxNorm Extension	Marketed Product	S	OMOP2609598	20170824	20991231	
+41411637	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Emra-Med	Drug	RxNorm Extension	Marketed Product	S	OMOP2609599	20170824	20991231	
+41411638	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2609600	20170824	20991231	
+41411639	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Medicopharm	Drug	RxNorm Extension	Marketed Product	S	OMOP2609601	20170824	20991231	
+41411640	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP2609602	20170824	20991231	
+41411641	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Cambridge	Drug	RxNorm Extension	Marketed Product	S	OMOP2609603	20170824	20991231	
+41411663	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP2609625	20170824	20991231	
+41411664	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP2609626	20170824	20991231	
+41411665	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609627	20170824	20991231	
+41411666	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Haematogmbh	Drug	RxNorm Extension	Marketed Product	S	OMOP2609628	20170824	20991231	
+41411667	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP2609629	20170824	20991231	
+41411668	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Veron	Drug	RxNorm Extension	Marketed Product	S	OMOP2609630	20170824	20991231	
+41411669	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Gerke	Drug	RxNorm Extension	Marketed Product	S	OMOP2609631	20170824	20991231	
+41411670	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Bb Farma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609632	20170824	20991231	
+41406597	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2604559	20170824	20991231	
+41411681	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4	Drug	RxNorm Extension	Quant Branded Box	S	OMOP2609643	20170824	20991231	
+41411695	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Emra-Med	Drug	RxNorm Extension	Marketed Product	S	OMOP2609657	20170824	20991231	
+41411696	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2609658	20170824	20991231	
+41411697	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP2609659	20170824	20991231	
+41411698	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP2609660	20170824	20991231	
+41411699	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP2609661	20170824	20991231	
+41411700	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Haematogmbh	Drug	RxNorm Extension	Marketed Product	S	OMOP2609662	20170824	20991231	
+41411701	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP2609663	20170824	20991231	
+41411702	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609664	20170824	20991231	
+41406661	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP2604623	20170824	20991231	
+41411733	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP2609695	20170824	20991231	
+41411734	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Cambridge	Drug	RxNorm Extension	Marketed Product	S	OMOP2609696	20170824	20991231	
+41411735	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Inopha	Drug	RxNorm Extension	Marketed Product	S	OMOP2609697	20170824	20991231	
+41411736	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Emra-Med	Drug	RxNorm Extension	Marketed Product	S	OMOP2609698	20170824	20991231	
+41411763	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609725	20170824	20991231	
+41411764	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP2609726	20170824	20991231	
+41411765	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Cambridge	Drug	RxNorm Extension	Marketed Product	S	OMOP2609727	20170824	20991231	
+41411766	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Bb Farma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609728	20170824	20991231	
+41411767	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP2609729	20170824	20991231	
+41411768	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Propharmed	Drug	RxNorm Extension	Marketed Product	S	OMOP2609730	20170824	20991231	
+41411802	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Gerke	Drug	RxNorm Extension	Marketed Product	S	OMOP2609764	20170824	20991231	
+41411803	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP2609765	20170824	20991231	
+41411804	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Propharmed	Drug	RxNorm Extension	Marketed Product	S	OMOP2609766	20170824	20991231	
+41411805	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by HVD	Drug	RxNorm Extension	Marketed Product	S	OMOP2609767	20170824	20991231	
+41411806	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP2609768	20170824	20991231	
+41411807	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP2609769	20170824	20991231	
+41411829	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6	Drug	RxNorm Extension	Quant Branded Box	S	OMOP2609791	20170824	20991231	
+41411830	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 12	Drug	RxNorm Extension	Quant Branded Box	S	OMOP2609792	20170824	20991231	
+41411831	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6	Drug	RxNorm Extension	Quant Branded Box	S	OMOP2609793	20170824	20991231	
+41411845	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Medicopharm	Drug	RxNorm Extension	Marketed Product	S	OMOP2609807	20170824	20991231	
+41406786	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP2604748	20170824	20991231	
+43516144	adalimumab 50 MG/ML Cartridge [Humira]	Drug	RxNorm Extension	Branded Drug	S	OMOP2803259	20170829	20991231	
+43519319	0.8 ML adalimumab 50 MG/ML Cartridge [Humira]	Drug	RxNorm Extension	Quant Branded Drug	S	OMOP2806434	20170829	20991231	
+43515105	adalimumab Cartridge [Humira]	Drug	RxNorm Extension	Branded Drug Form	S	OMOP2802220	20170829	20991231	
+44185344	adalimumab 100 MG/ML Auto-Injector [Humira] Box of 4	Drug	RxNorm Extension	Branded Drug Box	S	OMOP3062067	20171006	20991231	
+44185345	adalimumab 100 MG/ML Auto-Injector [Humira] Box of 2	Drug	RxNorm Extension	Branded Drug Box	S	OMOP3062068	20171006	20991231	
+44181618	adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 4	Drug	RxNorm Extension	Branded Drug Box	S	OMOP3058341	20171006	20991231	
+44174164	adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 1	Drug	RxNorm Extension	Branded Drug Box	S	OMOP3050887	20171006	20991231	
+44197006	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 2 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP3073729	20171006	20991231	
+44197007	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP3073730	20171006	20991231	
+44197008	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP3073731	20171006	20991231	
+44197308	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3074031	20171006	20991231	
+44197311	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Cambridge Major	Drug	RxNorm Extension	Marketed Product	S	OMOP3074034	20171006	20991231	
+44197312	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3074035	20171006	20991231	
+44197313	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 1 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP3074036	20171006	20991231	
+44197315	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3074038	20171006	20991231	
+44197316	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP3074039	20171006	20991231	
+44197317	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP3074040	20171006	20991231	
+44197319	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 1	Drug	RxNorm Extension	Quant Branded Box	S	OMOP3074042	20171006	20991231	
+44197320	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP3074043	20171006	20991231	
+44197321	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by Cambridge Major	Drug	RxNorm Extension	Marketed Product	S	OMOP3074044	20171006	20991231	
+44197322	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by Cambridge Major	Drug	RxNorm Extension	Marketed Product	S	OMOP3074045	20171006	20991231	
+44197324	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP3074047	20171006	20991231	
+44197325	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 2 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP3074048	20171006	20991231	
+44197326	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3074049	20171006	20991231	
+44197328	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP3074051	20171006	20991231	
+44197329	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira] Box of 6 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3074052	20171006	20991231	
+44197330	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 4 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP3074053	20171006	20991231	
+44197331	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 6 by Cambridge Major	Drug	RxNorm Extension	Marketed Product	S	OMOP3074054	20171006	20991231	
+44196891	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP3073614	20171006	20991231	
+44196897	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 6 by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP3073620	20171006	20991231	
+44196898	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 4 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3073621	20171006	20991231	
+44196899	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 2 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3073622	20171006	20991231	
+44196900	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 2 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP3073623	20171006	20991231	
+44196902	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 6	Drug	RxNorm Extension	Quant Branded Box	S	OMOP3073625	20171006	20991231	
+44196909	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP3073632	20171006	20991231	
+44196926	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP3073649	20171006	20991231	
+44196927	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 6 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP3073650	20171006	20991231	
+44196928	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3073651	20171006	20991231	
+44196929	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 2 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP3073652	20171006	20991231	
+44196930	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP3073653	20171006	20991231	
+44196950	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 6 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP3073673	20171006	20991231	
+44196951	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by European	Drug	RxNorm Extension	Marketed Product	S	OMOP3073674	20171006	20991231	
+44196952	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 6 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP3073675	20171006	20991231	
+44196953	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 4 by Abacus Medicine	Drug	RxNorm Extension	Marketed Product	S	OMOP3073676	20171006	20991231	
+44196961	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP3073684	20171006	20991231	
+44196974	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by Haematogmbh	Drug	RxNorm Extension	Marketed Product	S	OMOP3073697	20171006	20991231	
+44196982	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 4	Drug	RxNorm Extension	Quant Branded Box	S	OMOP3073705	20171006	20991231	
+44196993	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 6 by Emra-Med	Drug	RxNorm Extension	Marketed Product	S	OMOP3073716	20171006	20991231	
+44196996	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 4	Drug	RxNorm Extension	Quant Branded Box	S	OMOP3073719	20171006	20991231	
+44166682	adalimumab 100 MG/ML Auto-Injector [Humira] Box of 6	Drug	RxNorm Extension	Branded Drug Box	S	OMOP3043405	20171006	20991231	
+995276	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by 1az Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP4821785	20190327	20991231	
+995277	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Nmg	Drug	RxNorm Extension	Marketed Product	S	OMOP4821786	20190327	20991231	
+43630065	0.4 ML adalimumab 100 MG/ML Injection [Humira] by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP716778	20170824	20991231	
+43719854	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 6	Drug	RxNorm Extension	Quant Branded Box	S	OMOP716705	20170824	20991231	
+43715043	adalimumab 100 MG/ML Injection [Humira] Box of 4	Drug	RxNorm Extension	Branded Drug Box	S	OMOP710269	20170824	20991231	
+43684120	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP716700	20170824	20991231	
+43684121	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 4 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP716704	20170824	20991231	
+43684122	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 6 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP716706	20170824	20991231	
+43697140	adalimumab 100 MG/ML Injection [Humira] Box of 6	Drug	RxNorm Extension	Branded Drug Box	S	OMOP710271	20170824	20991231	
+43769004	adalimumab 100 MG/ML Injection [Humira] Box of 2	Drug	RxNorm Extension	Branded Drug Box	S	OMOP710268	20170824	20991231	
+43846019	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 2 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP716701	20170824	20991231	
+43846025	0.4 ML adalimumab 100 MG/ML Injection [Humira]	Drug	RxNorm Extension	Quant Branded Drug	S	OMOP716777	20170824	20991231	
+35414709	0.8 ML adalimumab 50 MG/ML Injection [Humira] Box of 2 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP1148294	20170824	20991231	
+44132947	0.8 ML adalimumab 50 MG/ML Injection [Humira] by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP1127578	20170824	20991231	
+41407080	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 2 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2605042	20170824	20991231	
+41411388	0.8 ML adalimumab 50 MG/ML Injection [Humira] Box of 2 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2609350	20170824	20991231	
+41406409	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 6 by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP2604371	20170824	20991231	
+41411579	0.8 ML adalimumab 50 MG/ML Injection [Humira] Box of 2 by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP2609541	20170824	20991231	
+41406483	0.4 ML adalimumab 100 MG/ML Injection [Humira] Box of 6 by Canoma	Drug	RxNorm Extension	Marketed Product	S	OMOP2604445	20170824	20991231	
+41411732	0.8 ML adalimumab 50 MG/ML Injection [Humira] Box of 2 by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP2609694	20170824	20991231	
+1592637	{3 (0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira]) } Pack [Humira Pen 80 MG/0.8 ML - Starter Package for Crohn's Disease, Ulcerative Colitis or Hidradenitis Suppurativa]	Drug	RxNorm	Branded Pack	S	1921245	20170807	20991231	
+1592638	{2 (0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira]) / 1 (0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira]) } Pack [Humira Pen 80 MG/0.8 ML and 40 MG/0.4 ML - Psoriasis/Uveitis Starter Package]	Drug	RxNorm	Branded Pack	S	1921468	20170807	20991231	
+1594202	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira]	Drug	RxNorm	Quant Branded Drug	S	1921240	20170807	20991231	
+36503680	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP4834826	20190904	20991231	
+36503747	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP4836286	20190904	20991231	
+36504131	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP4836490	20190904	20991231	
+36505564	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP4836372	20190904	20991231	
+36507282	0.2 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP4835214	20190904	20991231	
+36507993	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP4835982	20190904	20991231	
+36508265	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP4836437	20190904	20991231	
+36509252	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Orifarm Leverkus	Drug	RxNorm Extension	Marketed Product	S	OMOP4835324	20190904	20991231	
+42922663	0.800000000000000044 ML adalimumab 50 MG/ML Pen Injector [Humira]	Drug	RxNorm Extension	Quant Branded Drug	S	OMOP4649470	20180821	20991231	
+42922665	0.800000000000000044 ML adalimumab 50 MG/ML Injectable Solution [Humira]	Drug	RxNorm Extension	Quant Branded Drug	S	OMOP4649472	20180821	20991231	
+42933556	adalimumab 50 MG/ML Pen Injector [Humira]	Drug	RxNorm Extension	Branded Drug	S	OMOP4660293	20180821	20991231	
+42933558	adalimumab 50 MG/ML Injectable Solution [Humira]	Drug	RxNorm Extension	Branded Drug	S	OMOP4660295	20180821	20991231	
+42933559	adalimumab Injectable Solution [Humira]	Drug	RxNorm Extension	Branded Drug Form	S	OMOP4660296	20180821	20991231	
+43292086	0.8 ML adalimumab 50 MG/ML Injection [Humira]	Drug	RxNorm Extension	Quant Branded Drug		OMOP560078	20170824	20180801	U
+36891564	adalimumab Injectable Solution [Humira]	Drug	RxNorm Extension	Branded Drug Form		OMOP988425	20170824	20180801	U
+44035548	adalimumab 50 MG/ML Injectable Solution [Humira]	Drug	RxNorm Extension	Branded Drug		OMOP1030179	20170824	20180801	U
+19133087	{6 (0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira]) } Pack [Humira Pen - Crohn's Disease Starter Pack]	Drug	RxNorm	Branded Pack	S	825170	20081130	20991231	
+40141501	adalimumab Prefilled Syringe [Humira]	Drug	RxNorm	Branded Drug Form	S	727704	20070902	20991231	
+19121015	adalimumab 50 MG/ML [Humira]	Drug	RxNorm	Branded Drug Comp	S	576023	20050911	20991231	
+42902642	adalimumab 50 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Branded Drug	S	1359755	20121203	20991231	
+19035221	Humira	Drug	RxNorm	Brand Name		353484	19700101	20991231	
+19127197	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Quant Branded Drug	S	727705	20070902	20991231	
+1119155	0.4 ML adalimumab 50 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Quant Branded Drug	S	763565	20080330	20991231	
+45777078	{6 (0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira]) } Pack [Humira Pediatric Crohn's Disease Starter Package (6 count)]	Drug	RxNorm	Branded Pack	S	1594352	20141201	20991231	
+45777080	{3 (0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira]) } Pack [Humira Pediatric Crohn's Disease Starter Package (3 count)]	Drug	RxNorm	Branded Pack	S	1594358	20141201	20991231	
+45774624	0.2 ML adalimumab 50 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Quant Branded Drug	S	1551888	20141201	20991231	
+46275566	adalimumab Auto-Injector [Humira]	Drug	RxNorm	Branded Drug Form	S	1655727	20150908	20991231	
+46275567	0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira]	Drug	RxNorm	Quant Branded Drug	S	1655728	20150908	20991231	
+46275569	adalimumab 50 MG/ML Auto-Injector [Humira]	Drug	RxNorm	Branded Drug	S	1655730	20150908	20991231	
+46275867	adalimumab Injection [Humira]	Drug	RxNorm	Branded Drug Form	S	1656698	20150908	20991231	
+46275181	adalimumab 50 MG/ML Injection [Humira]	Drug	RxNorm	Branded Drug	S	1658078	20150908	20991231	
+35604491	adalimumab 100 MG/ML [Humira]	Drug	RxNorm	Branded Drug Comp	S	1726845	20160502	20991231	
+35604492	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Quant Branded Drug	S	1726846	20160502	20991231	
+35604494	adalimumab 100 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Branded Drug	S	1726848	20160502	20991231	
+36233548	Humira Injectable Product	Drug	RxNorm	Branded Dose Group	C	1171992	20160801	20991231	
+36249660	{4 (0.8 ML adalimumab 50 MG/ML Auto-Injector [Humira]) } Pack [Humira Pen - Psoriasis Starter Pack]	Drug	RxNorm	Branded Pack	S	1801278	20160801	20991231	
+1718325	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Quant Branded Drug	S	1855524	20170103	20991231	
+1718880	{1 (0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira]) / 1 (0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira]) } Pack [Humira Pediatric Crohn's Disease Starter Package (2 count)]	Drug	RxNorm	Branded Pack	S	1855527	20170103	20991231	
+1592628	{3 (0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira]) } Pack [Humira Prefilled Syringe 80 MG/0.8 ML Starter Pack - Pediatric Crohn's Disease]	Drug	RxNorm	Branded Pack	S	1873087	20170807	20991231	
+1592626	{6 (0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira]) } Pack [Humira Pen 40 MG/0.4 ML Starter Pack - Crohn's Disease]	Drug	RxNorm	Branded Pack	S	1872984	20170807	20991231	
+1592627	{4 (0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira]) } Pack [Humira Pen 40 MG/0.4 ML Starter Pack - Psoriasis]	Drug	RxNorm	Branded Pack	S	1872986	20170807	20991231	
+1592710	0.4 ML adalimumab 100 MG/ML Auto-Injector [Humira]	Drug	RxNorm	Quant Branded Drug	S	1872980	20170807	20991231	
+1592712	adalimumab 100 MG/ML Auto-Injector [Humira]	Drug	RxNorm	Branded Drug	S	1872982	20170807	20991231	
+1594145	0.1 ML adalimumab 100 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Quant Branded Drug	S	1921010	20170807	20991231	
+1594147	0.2 ML adalimumab 100 MG/ML Prefilled Syringe [Humira]	Drug	RxNorm	Quant Branded Drug	S	1921017	20170807	20991231	
+19098494	0.8 ML adalimumab 50 MG/ML Injection [Humira]	Drug	RxNorm	Quant Branded Drug	S	352334	19700101	20991231	
+40719114	0.8 ML adalimumab 50 MG/ML Injectable Solution [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP4738149	20180604	20991231	
+40719651	0.2 ML adalimumab 100 MG/ML Injectable Solution [Humira] Box of 2 by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP4737512	20180604	20991231	
+40719652	0.2 ML adalimumab 100 MG/ML Injectable Solution [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP4737511	20180604	20991231	
+40719653	0.2 ML adalimumab 100 MG/ML Injectable Solution [Humira] by Abbvie	Drug	RxNorm Extension	Marketed Product	S	OMOP4737510	20180604	20991231	
+40719654	0.2 ML adalimumab 100 MG/ML Injectable Solution [Humira]	Drug	RxNorm Extension	Quant Branded Drug	S	OMOP4737509	20180604	20991231	
+36418996	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] Box of 1	Drug	RxNorm Extension	Quant Branded Box	S	OMOP4761297	20181003	20991231	
+36419175	0.2 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box	S	OMOP4761473	20181003	20991231	
+36419678	adalimumab 100 MG/ML Auto-Injector [Humira] Box of 1	Drug	RxNorm Extension	Branded Drug Box	S	OMOP4761968	20181003	20991231	
+1594206	0.4 ML adalimumab 100 MG/ML Pen Injector [Humira]	Drug	RxNorm	Quant Branded Drug		1921466	20170807	20190331	U
+36418997	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira]	Drug	RxNorm Extension	Quant Branded Drug		OMOP4761298	20181003	20190416	U
+36505022	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Haematogmbh	Drug	RxNorm Extension	Marketed Product	S	OMOP4835528	20190904	20991231	
+36505337	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Cc	Drug	RxNorm Extension	Marketed Product	S	OMOP4835824	20190904	20991231	
+36505443	0.2 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Kohlpharma	Drug	RxNorm Extension	Marketed Product	S	OMOP4836446	20190904	20991231	
+36506209	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP4836092	20190904	20991231	
+36508828	0.8 ML adalimumab 100 MG/ML Auto-Injector [Humira] by Eurim-Pharm	Drug	RxNorm Extension	Marketed Product	S	OMOP4835909	20190904	20991231	
+36510089	0.8 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] by Haematogmbh	Drug	RxNorm Extension	Marketed Product	S	OMOP4834930	20190904	20991231	
+35412241	adalimumab 50 MG/ML Injectable Solution [Humira] Box of 2	Drug	RxNorm Extension	Branded Drug Box		OMOP1145826	20170824	20191003	U
+43197995	0.8 ML adalimumab 50 MG/ML Prefilled Syringe [Humira] Box of 2 by ABBVIE (ROYAUME-UNI)	Drug	RxNorm Extension	Marketed Product		OMOP507484	20160910	20191003	U
+35414513	0.4 ML adalimumab 100 MG/ML Injectable Solution [Humira] Box of 2 by ABBVIE (ROYAUME-UNI)	Drug	RxNorm Extension	Marketed Product		OMOP1148098	20170717	20191003	U
+35414547	0.4 ML adalimumab 100 MG/ML Prefilled Syringe [Humira] Box of 2 by ABBVIE (ROYAUME-UNI)	Drug	RxNorm Extension	Marketed Product		OMOP1148132	20170717	20191003	U
+35414707	0.8 ML adalimumab 50 MG/ML Injectable Solution [Humira] Box of 2 by ABBVIE (ROYAUME-UNI)	Drug	RxNorm Extension	Marketed Product		OMOP1148292	20170717	20191003	U
+35414697	0.8 ML adalimumab 50 MG/ML Injectable Solution [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box		OMOP1148282	20170824	20191003	U
+43519121	0.4 ML adalimumab 50 MG/ML Injectable Solution [Humira]	Drug	RxNorm Extension	Quant Branded Drug		OMOP2806236	20170829	20191003	U
+43519122	0.4 ML adalimumab 50 MG/ML Injectable Solution [Humira] Box of 2	Drug	RxNorm Extension	Quant Branded Box		OMOP2806237	20170829	20191003	U
+43519347	0.8 ML adalimumab 50 MG/ML Injectable Solution [Humira] Box of 6	Drug	RxNorm Extension	Quant Branded Box		OMOP2806462	20170829	20191003	U
+43516544	adalimumab 50 MG/ML Injectable Solution [Humira] Box of 6	Drug	RxNorm Extension	Branded Drug Box		OMOP2803659	20170829	20191003	U

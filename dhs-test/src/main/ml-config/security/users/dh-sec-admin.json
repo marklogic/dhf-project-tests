@@ -1,0 +1,6 @@
+{
+  "user-name": "dh-sec-admin",
+  "description": "A data hub sec-admin user", 
+  "password": "dh-sec-admin",
+  "role": ["data-hub-security-admin"]
+}

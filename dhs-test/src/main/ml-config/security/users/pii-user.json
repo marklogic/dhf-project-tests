@@ -1,0 +1,6 @@
+{
+  "user-name": "pii-user",
+  "description": "A pii-user user", 
+  "password": "pii-user",
+  "role": ["data-hub-developer", "pii-reader"]
+}

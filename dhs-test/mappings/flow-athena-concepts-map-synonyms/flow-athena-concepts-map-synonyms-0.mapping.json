@@ -1,0 +1,18 @@
+{
+  "lang" : "zxx",
+  "name" : "flow-athena-concepts-map-synonyms",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://example.org/Concept-0.0.1/Concept",
+  "sourceContext" : "/",
+  "sourceURI" : "/athena/synonym/fcfe7297-3dde-4f4a-9787-c50d6c370e17.xml",
+  "properties" : {
+    "concept_id" : {
+      "sourcedFrom" : "concept_id"
+    },
+    "synonyms" : {
+      "sourcedFrom" : "concept_synonym_name"
+    }
+  },
+  "namespaces" : { }
+}

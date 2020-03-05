@@ -1,0 +1,6 @@
+{
+  "user-name": "dh-env-manager",
+  "description": "A data hub env-manager user", 
+  "password": "dh-env-manager",
+  "role": ["data-hub-environment-manager"]
+}

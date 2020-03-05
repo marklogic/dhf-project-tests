@@ -1,0 +1,37 @@
+{
+  "lang" : "zxx",
+  "path-namespace" : [ {
+    "prefix" : "es",
+    "namespace-uri" : "http://marklogic.com/entity-services"
+  } ],
+  "range-element-index" : [ {
+    "invalid-values" : "reject",
+    "localname" : "invalid_reason",
+    "namespace-uri" : null,
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "localname" : "domain",
+    "namespace-uri" : null,
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "localname" : "vocabulary",
+    "namespace-uri" : null,
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/codepoint"
+  }, {
+    "invalid-values" : "reject",
+    "localname" : "is_standard",
+    "namespace-uri" : null,
+    "range-value-positions" : false,
+    "scalar-type" : "string",
+    "collation" : "http://marklogic.com/collation/"
+  } ],
+  "database-name" : "%%mlFinalDbName%%"
+}

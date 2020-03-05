@@ -1,0 +1,48 @@
+{
+  "lang" : "zxx",
+  "name" : "flow-athena-concepts-map-concepts",
+  "description" : "",
+  "version" : 0,
+  "targetEntityType" : "http://example.org/Concept-0.0.1/Concept",
+  "sourceContext" : "/",
+  "sourceURI" : "/athena/concept/863975ee-bdbc-4a85-b5c0-2b36bb9326b3.xml",
+  "properties" : {
+    "concept_name" : {
+      "sourcedFrom" : "concept_name"
+    },
+    "source_concept_code" : {
+      "sourcedFrom" : "concept_code"
+    },
+    "valid_end_date" : {
+      "sourcedFrom" : "parseDate(valid_end_date/text(),\"YYYYMMDD\")"
+    },
+    "vocabulary" : {
+      "sourcedFrom" : "vocabulary_id"
+    },
+    "concept_id" : {
+      "sourcedFrom" : "concept_id"
+    },
+    "end_valid_date" : {
+      "sourcedFrom" : "parseDate(valid_end_date/text(),\"YYYYMMDD\")"
+    },
+    "domain" : {
+      "sourcedFrom" : "domain_id"
+    },
+    "concept_class" : {
+      "sourcedFrom" : "concept_class_id"
+    },
+    "start_valid_date" : {
+      "sourcedFrom" : "parseDate(valid_start_date/text(),\"YYYYMMDD\")"
+    },
+    "invalid_reason" : {
+      "sourcedFrom" : "invalid_reason"
+    },
+    "valid_start_date" : {
+      "sourcedFrom" : "parseDate(valid_start_date/text(),\"YYYYMMDD\")"
+    },
+    "is_standard" : {
+      "sourcedFrom" : "standard_concept eq 'S'"
+    }
+  },
+  "namespaces" : { }
+}

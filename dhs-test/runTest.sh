@@ -2,28 +2,35 @@
 env=$1
 host=$2
 
-echo "Deploying users"
-./gradlew mlDeployUsers -PenvironmentName=$env
-
-echo "Running dhsDeploy as dh-dev user. This task will also run hubDeployAsDeveloper which deploys indexes, ELS configs and other ML resources. Check documentation for more info:
-https://docs.marklogic.com/datahub/projects/deploy-to-cloud-services.html and https://docs.marklogic.com/datahub/security/users-and-roles.html"
+echo "Running dhsDeploy as dh-dev user. This task will also run hubDeployAsDeveloper which deploys indexes, ELS configs and other ML resources. Check documentation for more info: https://docs.marklogic.com/datahub/projects/deploy-to-cloud-services.html and https://docs.marklogic.com/datahub/security/users-and-roles.html"
 ./gradlew dhsDeploy -PenvironmentName=$env
 
+echo "Running the ingestion steps"
+./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=1,5
+
+echo "Running the mapping steps"
+./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=3,4
+
+echo "Running the mastering steps"
+./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=2
+
 #Get uri of a mapped document
-uri=`curl -X GET --anyauth -u dh-op:dh-op https://$2:8010/v1/search?database=data-hub-FINAL&collection=map-concepts&pageLength=1 | xmllint --xpath "//@uri" - | cut -f 2 -d "="`
-sed -e 's/^"//' -e 's/"$//' <<<"$uri"
+uri=`curl -X GET --silent --anyauth -u dh-op:dh-op "https://$host:8010/v1/search?database=data-hub-FINAL&collection=map-concepts&pageLength=1" | xmllint --xpath "//@uri" - | cut -f 2 -d "="`
+uri=`sed -e 's/^"//' -e 's/"$//' <<<"$uri"`
 
 #Getting the search response as a non pii user
-AsANonPIIUser=`curl -X GET --anyauth -u dh-dev:dh-dev https://$2:8010/v1/documents?database=data-hub-FINAL&uri=$uri | xmllint --xpath "//source_concept_code" -`
+AsANonPIIUser=`curl -X GET --silent --anyauth -u dh-dev:dh-dev "https://$host:8010/v1/documents?database=data-hub-FINAL&uri=$uri" | xmllint --xpath "//source_concept_code" -`
 
 #Getting the search response as a pii user
-AsAPIIUser=`curl -X GET --anyauth -u pii-user:pii-user https://$2:8010/v1/documents?database=data-hub-FINAL&uri=$uri | xmllint --xpath "//source_concept_code" -`
+AsAPIIUser=`curl -X GET --silent --anyauth -u pii-user:pii-user "https://$host:8010/v1/documents?database=data-hub-FINAL&uri=$uri" | xmllint --xpath "//source_concept_code" -`
 
+echo "NoPIIUser: $AsANonPIIUser"
 if ! test -z "$AsANonPIIUser"
 then
-echo "TEST FAILED: A non pii user was able to read PII property""
+echo "TEST FAILED: A non pii user was able to read PII property"
 fi
 
+echo "PIIUser: $AsAPIIUser"
 if test -z "$AsAPIIUser"
 then
 echo "TEST FAILED: A pii user was not able to read PII property"

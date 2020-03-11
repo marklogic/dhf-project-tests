@@ -37,7 +37,7 @@
       "stepDefinitionName" : "default-ingestion",
       "stepDefinitionType" : "INGESTION",
       "fileLocations" : {
-        "inputFilePath" : "/Users/sbalasub/Downloads/dhf-51-upgraded-to-52/doLoad/concept",
+        "inputFilePath" : "doLoad/concept",
         "inputFileType" : "csv",
         "outputURIReplacement" : "/.+/doLoad/*,'/athena/'",
         "separator" : "\\t"
@@ -214,7 +214,7 @@
       "stepDefinitionName" : "default-ingestion",
       "stepDefinitionType" : "INGESTION",
       "fileLocations" : {
-        "inputFilePath" : "/Users/sbalasub/Downloads/dhf-51-upgraded-to-52/doLoad/synonym",
+        "inputFilePath" : "doLoad/synonym",
         "inputFileType" : "csv",
         "outputURIReplacement" : "/.+/doLoad/*,'/athena/'",
         "separator" : "\\t"

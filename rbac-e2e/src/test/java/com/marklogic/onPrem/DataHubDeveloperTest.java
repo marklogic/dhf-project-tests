@@ -165,17 +165,18 @@ public class DataHubDeveloperTest extends BaseTest {
     @Test
     @Order(1)
     public void task21And31And38And39CRUDTest() {
-        configDir = MLMODULES.toString()+"/root/custom-modules";
-        copyDirectoryIntoProject("ml-modules/root/mapping-functions/",configDir);
+        configDir = MLMODULES.toString()+"/root";
+        copyDirectoryIntoProject("ml-modules/root/custom-modules",configDir);
         copyResourcesIntoProject("Order.entity.json","entities");
         copyResourcesIntoProject("ingestion_mapping_mastering-flow.flow.json","flows");
         copyResourcesIntoProject("ingestion_mapping_mastering-flow-mapping-step-xml-1.mapping.json","mappings/ingestion_mapping_mastering-flow-mapping-step-xml");
 
-        BuildResult loadModules = runTask(":mlLoadModules", username, password);
+        BuildResult loadModules = runTask(":hubDeployAsDeveloper", username, password);
         assertTrue(loadModules.getOutput().contains("BUILD SUCCESSFUL"), loadModules.getOutput());
 
         BuildResult runFlow = runTask(":hubRunFlow", "-PflowName=ingestion_mapping_mastering-flow", username, password);
-        assertTrue(runFlow.getOutput().contains("\"failedEvents\" : 0"), runFlow.getOutput());
+        assertFalse(runFlow.getOutput().contains("\"successfulEvents\" : 0"), runFlow.getOutput());
+        assertFalse(runFlow.getOutput().contains("\"failedEvents\" : 10"), runFlow.getOutput());
         assertTrue(runFlow.getOutput().contains("BUILD SUCCESSFUL"), runFlow.getOutput());
     }
 

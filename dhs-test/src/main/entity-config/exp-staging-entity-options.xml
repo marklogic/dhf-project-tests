@@ -43,6 +43,16 @@
       <search:element ns="http://marklogic.com/entity-services" name="title"/>
     </search:value>
   </search:constraint>
+  <search:constraint name="Concept">
+    <search:container>
+      <search:json-property>Concept</search:json-property>
+    </search:container>
+  </search:constraint>
+  <search:constraint name="Concept-xml">
+    <search:container>
+      <search:element ns="" name="Concept"/>
+    </search:container>
+  </search:constraint>
   <search:constraint name="concept_id">
     <search:value>
       <search:element ns="" name="concept_id"/>

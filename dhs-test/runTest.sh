@@ -3,7 +3,7 @@ env=$1
 host=$2
 
 echo "Running dhsDeploy as dh-dev user. This task will also run hubDeployAsDeveloper which deploys indexes, ELS configs and other ML resources. Check documentation for more info: https://docs.marklogic.com/datahub/projects/deploy-to-cloud-services.html and https://docs.marklogic.com/datahub/security/users-and-roles.html"
-./gradlew dhsDeploy -PenvironmentName=$env
+./gradlew hubDeployAsDeveloper -PenvironmentName=$env
 
 echo "Running the ingestion steps"
 ./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=1,5

@@ -1,17 +1,25 @@
-/*buildscript {
-repositories {
-jcenter()
-mavenLocal()
+buildscript {
+    repositories {
+        jcenter()
+        mavenLocal()
+        maven { url "https://plugins.gradle.org/m2/" }
 //maven {url 'http://distro.marklogic.com/nexus/repository/maven-releases/'}
 //maven {url 'http://distro.marklogic.com/nexus/repository/maven-releases/'}
+    }
+    dependencies {
+        classpath "net.saliman:gradle-properties-plugin:1.5.1"
+        if (project.hasProperty("testing")) {
+            classpath "com.marklogic:ml-data-hub:5.2-SNAPSHOT"
+        } else {
+            classpath "com.marklogic:ml-data-hub:5.2.1"
+        }
+    }
 }
-dependencies {
-classpath "com.marklogic:ml-data-hub:5.2-SNAPSHOT"
-}
-}*/
-plugins { 
-    id 'net.saliman.properties' version '1.4.6'
-    id 'com.marklogic.ml-data-hub' version '5.2.0'
-}
-//apply plugin: "com.marklogic.ml-data-hub"
-
+//plugins { 
+//    id 'net.saliman.properties' version '1.5.1'
+//    id 'com.marklogic.ml-data-hub' version '5.2.1'
+//}
+    apply plugin: "net.saliman.properties"
+    apply plugin: "com.marklogic.ml-data-hub"
+    
+    

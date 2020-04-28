@@ -6,23 +6,23 @@ echo "Running dhsDeploy as dh-dev user. This task will also run hubDeployAsDevel
 ./gradlew hubDeployAsDeveloper -PenvironmentName=$env
 
 echo "Running the ingestion steps"
-./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=1,5
+./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=1,2
 
 echo "Running the mapping steps"
-./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=3,4
+./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=3
 
 echo "Running the mastering steps"
-./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=2
+./gradlew hubRunFlow -PenvironmentName=$env -PflowName=flow-athena-concepts -Psteps=4
 
 #Get uri of a mapped document
 uri=`curl -X GET --silent --anyauth -u dh-op:dh-op "https://$host:8010/v1/search?database=data-hub-FINAL&collection=map-concepts&pageLength=1" | xmllint --xpath "//@uri" - | cut -f 2 -d "="`
 uri=`sed -e 's/^"//' -e 's/"$//' <<<"$uri"`
 
 #Getting the search response as a non pii user
-AsANonPIIUser=`curl -X GET --silent --anyauth -u dh-dev:dh-dev "https://$host:8010/v1/documents?database=data-hub-FINAL&uri=$uri" | xmllint --xpath "//source_concept_code" -`
+AsANonPIIUser=`curl -X GET --silent --anyauth -u dh-dev:dh-dev "https://$host:8010/v1/documents?database=data-hub-FINAL&uri=$uri" | xmllint --xpath "//concept_id" -`
 
 #Getting the search response as a pii user
-AsAPIIUser=`curl -X GET --silent --anyauth -u pii-user:pii-user "https://$host:8010/v1/documents?database=data-hub-FINAL&uri=$uri" | xmllint --xpath "//source_concept_code" -`
+AsAPIIUser=`curl -X GET --silent --anyauth -u pii-user:pii-user "https://$host:8010/v1/documents?database=data-hub-FINAL&uri=$uri" | xmllint --xpath "//concept_id" -`
 
 echo "NoPIIUser: $AsANonPIIUser"
 if ! test -z "$AsANonPIIUser"

@@ -1,5 +1,5 @@
 {
-  "path-expression" : "/*:envelope//*:instance//Concept/source_concept_code",
+  "path-expression" : "/*:envelope//*:instance//Concept/concept_id",
   "path-namespace" : [ ],
   "permission" : {
     "role-name" : "pii-reader",

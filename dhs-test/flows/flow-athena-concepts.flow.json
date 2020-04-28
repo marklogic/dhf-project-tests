@@ -44,6 +44,72 @@
       }
     },
     "2" : {
+      "name" : "load-athena-synonyms",
+      "description" : "Load concept synonyms",
+      "options" : {
+        "additionalCollections" : [ "load-athena-synonyms,source-athena,dataset-version-CDM-5.1,dataset-synonyms" ],
+        "headers" : {
+          "sources" : [ {
+            "name" : "flow-athena-concepts"
+          } ],
+          "createdOn" : "currentDateTime",
+          "createdBy" : "currentUser"
+        },
+        "sourceQuery" : "cts.collectionQuery([])",
+        "collections" : [ "load-athena-synonyms", "load-athena-synonyms,source-athena,dataset-version-CDM-5.1,dataset-synonyms" ],
+        "permissions" : "data-hub-operator,read,data-hub-operator,update",
+        "outputFormat" : "xml",
+        "targetDatabase" : "data-hub-STAGING"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "default-ingestion",
+      "stepDefinitionType" : "INGESTION",
+      "fileLocations" : {
+        "inputFilePath" : "doLoad/synonym",
+        "inputFileType" : "csv",
+        "outputURIReplacement" : "/.+/doLoad/*,'/athena/'",
+        "separator" : "\\t"
+      }
+    },
+    "3" : {
+      "name" : "map-concepts",
+      "description" : "Map athena data to Concept entity",
+      "options" : {
+        "additionalCollections" : [ "source-athena,dataset-version-CDM-5.1,entity-concept,domain-drug" ],
+        "sourceQuery" : "cts.collectionQuery([\"dataset-concepts\"])",
+        "mapping" : {
+          "name" : "flow-athena-concepts-map-concepts",
+          "version" : 0
+        },
+        "targetEntity" : "Concept",
+        "sourceDatabase" : "data-hub-STAGING",
+        "collections" : [ "map-concepts", "Concept", "source-athena,dataset-version-CDM-5.1,entity-concept,domain-drug" ],
+        "validateEntity" : false,
+        "sourceCollection" : "dataset-concepts",
+        "outputFormat" : "xml",
+        "targetDatabase" : "data-hub-FINAL"
+      },
+      "customHook" : {
+        "module" : "",
+        "parameters" : { },
+        "user" : "",
+        "runBefore" : false
+      },
+      "retryLimit" : 0,
+      "batchSize" : 100,
+      "threadCount" : 4,
+      "stepDefinitionName" : "entity-services-mapping",
+      "stepDefinitionType" : "MAPPING"
+    },
+    "4" : {
       "name" : "match-concepts-with-synonyms",
       "description" : "",
       "options" : {
@@ -122,103 +188,6 @@
       "threadCount" : 4,
       "stepDefinitionName" : "default-matching",
       "stepDefinitionType" : "MATCHING"
-    },
-    "3" : {
-      "name" : "map-synonyms",
-      "description" : "Map synonyms to the Concept entity",
-      "options" : {
-        "additionalCollections" : [ "source-athena,dataset-version-CDM-5.1,entity-concept,domain-drug" ],
-        "sourceQuery" : "cts.collectionQuery([\"dataset-synonyms\"])",
-        "mapping" : {
-          "name" : "flow-athena-concepts-map-synonyms",
-          "version" : 0
-        },
-        "targetEntity" : "Concept",
-        "sourceDatabase" : "data-hub-STAGING",
-        "collections" : [ "map-synonyms", "Concept", "source-athena,dataset-version-CDM-5.1,entity-concept,domain-drug" ],
-        "permissions" : "data-hub-operator,read,data-hub-operator,update",
-        "validateEntity" : false,
-        "sourceCollection" : "dataset-synonyms",
-        "outputFormat" : "xml",
-        "targetDatabase" : "data-hub-FINAL"
-      },
-      "customHook" : {
-        "module" : "",
-        "parameters" : { },
-        "user" : "",
-        "runBefore" : false
-      },
-      "retryLimit" : null,
-      "batchSize" : 100,
-      "threadCount" : 4,
-      "stepDefinitionName" : "entity-services-mapping",
-      "stepDefinitionType" : "MAPPING"
-    },
-    "4" : {
-      "name" : "map-concepts",
-      "description" : "Map athena data to Concept entity",
-      "options" : {
-        "additionalCollections" : [ "source-athena,dataset-version-CDM-5.1,entity-concept,domain-drug" ],
-        "sourceQuery" : "cts.collectionQuery([\"dataset-concepts\"])",
-        "mapping" : {
-          "name" : "flow-athena-concepts-map-concepts",
-          "version" : 0
-        },
-        "targetEntity" : "Concept",
-        "sourceDatabase" : "data-hub-STAGING",
-        "collections" : [ "map-concepts", "Concept", "source-athena,dataset-version-CDM-5.1,entity-concept,domain-drug" ],
-        "validateEntity" : false,
-        "sourceCollection" : "dataset-concepts",
-        "outputFormat" : "xml",
-        "targetDatabase" : "data-hub-FINAL"
-      },
-      "customHook" : {
-        "module" : "",
-        "parameters" : { },
-        "user" : "",
-        "runBefore" : false
-      },
-      "retryLimit" : 0,
-      "batchSize" : 100,
-      "threadCount" : 4,
-      "stepDefinitionName" : "entity-services-mapping",
-      "stepDefinitionType" : "MAPPING"
-    },
-    "5" : {
-      "name" : "load-athena-synonyms",
-      "description" : "Load concept synonyms",
-      "options" : {
-        "additionalCollections" : [ "load-athena-synonyms,source-athena,dataset-version-CDM-5.1,dataset-synonyms" ],
-        "headers" : {
-          "sources" : [ {
-            "name" : "flow-athena-concepts"
-          } ],
-          "createdOn" : "currentDateTime",
-          "createdBy" : "currentUser"
-        },
-        "sourceQuery" : "cts.collectionQuery([])",
-        "collections" : [ "load-athena-synonyms", "load-athena-synonyms,source-athena,dataset-version-CDM-5.1,dataset-synonyms" ],
-        "permissions" : "data-hub-operator,read,data-hub-operator,update",
-        "outputFormat" : "xml",
-        "targetDatabase" : "data-hub-STAGING"
-      },
-      "customHook" : {
-        "module" : "",
-        "parameters" : { },
-        "user" : "",
-        "runBefore" : false
-      },
-      "retryLimit" : 0,
-      "batchSize" : 100,
-      "threadCount" : 4,
-      "stepDefinitionName" : "default-ingestion",
-      "stepDefinitionType" : "INGESTION",
-      "fileLocations" : {
-        "inputFilePath" : "doLoad/synonym",
-        "inputFileType" : "csv",
-        "outputURIReplacement" : "/.+/doLoad/*,'/athena/'",
-        "separator" : "\\t"
-      }
     }
   }
 }

@@ -9,7 +9,7 @@
     "Concept" : {
       "primaryKey" : "concept_id",
       "required" : [ "concept_id", "vocabulary", "domain", "concept_name" ],
-      "pii" : [ "source_concept_code" ],
+      "pii" : [ "concept_id" ],
       "elementRangeIndex" : [ "vocabulary", "domain", "is_standard", "invalid_reason" ],
       "rangeIndex" : [ ],
       "wordLexicon" : [ ],
